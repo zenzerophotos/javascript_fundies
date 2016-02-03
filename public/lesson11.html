@@ -75,7 +75,7 @@
         <hr>
         <h3>Output</h3>
         <div id="second" class="row">
-            
+
         </div>
         <!-- /#second -->
     </div>
@@ -86,7 +86,70 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/app.js"></script>
+    <script>
+        /*
+      This first variable will be the data that we may pull from a database in 
+      order to dynamically style and provide content to a website.
+      */
+      var data = [
+        {
+          name: "Justin Dennison",
+          adjective: "awesome",
+          backgroundColor: "AAAAA"+Math.ceil(Math.random()*9),
+          fontSize: "12px",
+        },
+        {
+          name: "JDawg Shenanigans",
+          adjective: "bombastic",
+          backgroundColor: "AAAAA"+Math.ceil(Math.random()*9),
+          fontSize: "12px",
+        }
+      ];
+
+      /*
+        This second expression is a function expression going to serve as a way to generate our "template" for creating
+        dynamic content. This will return [spit out] a jQuery object that is constructed.
+      */
+      var renderElement = function(name, adjective, backgroundColor, fontSize){
+        var $templateString = 	$("<div class='row'></div>")
+                    .append("<h3>"+name+" is "+ adjective +"</h3>");
+
+
+        return $templateString;
+      }
+
+
+      // Tutorial:
+      // Let's grab the div with the id second
+
+
+
+      // We are going to make this a named function.
+      // Let's iterate over all of the objects in data so that we can 
+      // add elements that we create from that data into the DOM
+
+        //1. Grab an element of the object array.
+        //2. Use the renderElement function to create a div formatted appropriately
+        //3. Add the element to the div
+
+      // Let's add a click handler to the button so that when the button
+      // is clicked then the above function is run.
+
+      /****************************************************************/
+      /*
+        Assignment: Complete the following.
+
+        A. Add an object to the array that represents you. Make sure that you
+        have all of the properties in the object. Careful of that punctuation.
+        B. Change the renderElement function so that you set the element to the background color
+        C. Change the renderElement function so that you set the font size to the passed value fontSize
+        CHALLENGE: Add a border attribute to the objects (all of them) so that you can alter
+              the renderElement function so you can dynamically generate a border
+      */
+
+
+    </script>
+
 </body>
 
 </html>

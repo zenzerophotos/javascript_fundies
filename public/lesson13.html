@@ -84,7 +84,7 @@
                     <img id="pic4" class="img-responsive" src="http://placehold.it/75x75" alt="">
                 </a>
             </div>
-        
+
         </div>
         <!-- /#first -->
         <hr>
@@ -108,7 +108,61 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/app.js"></script>
+    <script>
+      /*
+        For this project, we will briefly touch on animating layouts since that
+        can add some pizzazz. However, keep in mind that you can over do these.
+
+      */
+
+      //Let's add a document onready function so that things will work the way that
+      // we expect them
+      $(document).ready(function{
+
+        //Cache all of the buttons as jQuery objects.
+
+        //Let's add an on click listener to Move Pic #1
+          //Grab a reference to pic1
+          //Create an object to describe the animation
+            //Top: Change by 30px
+
+        //Let's add an on click listener to Blow It Up!
+          //Grab a reference to pic2
+          // Create an object to describe the animation
+            //Width: 400px
+            //Height: 500px
+          //Animate the object with a slow function
+
+        //Add an on click listener to StepWise transform
+          //Grab a reference to pic3
+          //Using the queue feature of jQuery animation:
+          //Store the current values of height and width
+
+          //Animate to a new height of 300px
+
+          //Animate to a new width of 500px
+
+          //Animate to the original height
+
+          //Animate to the original width
+
+      /******************************************************************/
+      /*
+        Assignment: Let's try some open ended stuff.
+
+        A. Create a new button that animates one of the pics using
+          an object of css properties
+
+        B. Create a new button that animates one of the pics using an easing 
+          function.
+
+        C. Create a new button that animates something that you added to the 
+          page [new content] however you want.
+      */
+
+      });
+    </script>
+
 
 </body>
 
