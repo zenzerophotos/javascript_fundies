@@ -1,0 +1,41 @@
+We have been working inside of the same file as our main website. However, that seems like a horrible way to maintain our JavaScript code. The best way to maintain this is put your code in file(s) in an external file then link those files together using a script tag.
+
+For Example:
+
+Internal JavaScript:
+
+[File: index.html]
+
+<html>
+...
+<script>
+	var headings = document.getElementByTagName("h1");
+
+	for(var i = 0; i < body.length; i++){
+		headings[i].style.color = "Brown";
+	}
+</script>
+</body>
+</html>
+
+
+-However, this is what we want to NOT do. So how does this work...
+
+External JavaScript:
+
+[File: index.html]
+
+<html>
+...
+<script src = "js/app.js"></script>
+</body>
+</html>
+----------------------------------------------------------------------
+[File: app.js] in the folder js
+
+var headings = document.getElementByTagName("h1");
+
+for(var i = 0; i < body.length; i++){
+	headings[i].style.color = "Brown";
+}
+
